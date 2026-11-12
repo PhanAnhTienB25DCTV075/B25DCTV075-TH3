@@ -9,14 +9,12 @@ class Clock extends Component {
     this.timerId = null;
   }
 
-  // Khởi tạo bộ đếm mỗi giây khi component được gắn vào DOM
   componentDidMount() {
     this.timerId = setInterval(() => {
       this.setState({ currentTime: new Date() });
     }, 1000);
   }
 
-  // Dừng đồng hồ đúng cách khi component bị ẩn / gỡ khỏi DOM
   componentWillUnmount() {
     if (this.timerId) {
       clearInterval(this.timerId);

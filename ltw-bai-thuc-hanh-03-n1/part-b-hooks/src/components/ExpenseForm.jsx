@@ -10,7 +10,6 @@ export default function ExpenseForm({ onAddExpense, isSubmitting }) {
   const [date, setDate] = useState(today);
   const [errors, setErrors] = useState({});
 
-  // Yêu cầu Phần B.3: Dùng useRef để focus ô nhập sau khi thêm
   const titleInputRef = useRef(null);
 
   const validate = () => {
@@ -62,7 +61,6 @@ export default function ExpenseForm({ onAddExpense, isSubmitting }) {
     setDate(today);
     setErrors({});
 
-    // Focus lại vào ô nhập nội dung sau khi thêm thành công
     if (titleInputRef.current) {
       titleInputRef.current.focus();
     }

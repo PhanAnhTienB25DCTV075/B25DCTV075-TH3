@@ -72,7 +72,6 @@ class App extends Component {
     this.updateDocumentTitle();
   }
 
-  // Cập nhật tiêu đề tab trình duyệt khi danh sách chi tiêu thay đổi
   componentDidUpdate(prevProps, prevState) {
     if (prevState.expenses !== this.state.expenses) {
       this.updateDocumentTitle();
